@@ -19,13 +19,24 @@ public class Fan {
 
     //isOn
 
-    public void isOn(boolean isOn) {
-        this.isOn = isOn;
-    }
+//    public void isOn(boolean isOn) {
+//        this.isOn = isOn;
+//    }
 
     //This solution is more useful for a consumer as opposed to the solution above
+
     public void switchOn() {
         this.isOn = true;
+        setSpeed((byte)5);
+    }
+
+    public void switchOff() {
+        this.isOn = false;
+        setSpeed((byte)0);
+    }
+
+    public void setSpeed(byte speed){
+        this.speed = speed;
     }
 
     //Print state
